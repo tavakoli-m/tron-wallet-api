@@ -54,7 +54,7 @@ app.post('/send-tron', async (req, res) => {
 
         res.json({
             message: 'تراکنش ارسال شد',
-            transactionId: broadcast.txID
+            tx : transaction.txID,
         });
     } catch (error) {
         res.status(500).json({ message: 'خطا در ارسال تراکنش', error: error.message });
